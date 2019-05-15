@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sun.music_64">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon_app"
@@ -9,15 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".screen.SplashActivity"
-                  android:theme="@style/SplashTheme">
+        <activity android:name=".genrescreen.GenreActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".screen.MainActivity"/>
+        <activity
+            android:name=".screen.SplashActivity"
+            android:theme="@style/SplashTheme">
+        </activity>
+        <activity android:name=".screen.MainActivity" />
     </application>
 
 </manifest>
